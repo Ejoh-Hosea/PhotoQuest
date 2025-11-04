@@ -7,7 +7,7 @@ const SearchForm = () => {
   };
   return (
     <section>
-      <h1>PhotoQuest</h1>
+      <h1 className="title">PhotoQuest</h1>
       <form className="search-form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -15,7 +15,9 @@ const SearchForm = () => {
           name="search"
           placeholder="cat"
         ></input>
-        <button type="submit">search</button>
+        <button type="submit" className="btn">
+          search
+        </button>
       </form>
     </section>
   );
