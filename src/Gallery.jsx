@@ -39,7 +39,7 @@ const Gallery = () => {
     <section className="image-container">
       {results.map((item) => {
         const url = item?.urls?.regular;
-        return <img src={url} alt={item.alt_description} className="image" />;
+        return <img src={url} alt={item.alt_description} className="img" />;
       })}
     </section>
   );
