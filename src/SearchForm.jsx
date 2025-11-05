@@ -1,9 +1,12 @@
+import { useGlobalContext } from "./context";
+
 const SearchForm = () => {
+  const { setSearchImage } = useGlobalContext();
   const handleSubmit = (e) => {
     e.preventDefault();
     const searchValue = e.target.elements.search.value;
     if (!searchValue) return;
-    console.log(searchValue);
+    setSearchImage(searchValue);
   };
   return (
     <section>
@@ -13,7 +16,7 @@ const SearchForm = () => {
           type="text"
           className="form-input search-input"
           name="search"
-          placeholder="cat"
+          placeholder="house"
         ></input>
         <button type="submit" className="btn">
           search
