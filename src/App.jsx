@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
-import SearchForm from "./searchForm";
+import SearchForm from "./SearchForm";
 import Gallery from "./Gallery";
 
 function App() {
