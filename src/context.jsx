@@ -6,12 +6,11 @@ const getInitialDarkMode = () => {
   const prefersDarkMode = window.matchMedia(
     "prefers-color-scheme:dark"
   ).matches;
-  const storedDarkMode = localStorage.getItem("darkTheme");
-  if (storedDarkMode === null) {
-    return prefersDarkMode;
-  }
-  return storedDarkMode === "true";
+  const storedDarkMode = localStorage.getItem("darkTheme") === "true";
+
+  return storedDarkMode || prefersDarkMode;
 };
+
 export const AppProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(getInitialDarkMode);
   const [searchImage, setSearchImage] = useState("House");
