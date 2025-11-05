@@ -1,18 +1,75 @@
-# React + Vite
+# PhotoQuest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**PhotoQuest** is a simple and elegant image search web app built with **React**, **Vite**, and the **Unsplash API**.  
+It allows users to search for high-quality photos from Unsplash, toggle between **light** and **dark mode**, and view images in a responsive gallery layout.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Search Images** by keyword using the Unsplash API  
+  -**Dark/Light Mode Toggle** — remembers your preference across sessions
+- **Fast Performance** powered by Vite and React Query caching
+- **Persistent Theme** stored in `localStorage`
+- **Responsive Design** for all screen sizes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React (Vite)
+- **Styling:** Custom CSS (light/dark theme support)
+- **API:** Unsplash API
+- **Data Fetching:** @tanstack/react-query
+- **HTTP Client:** Axios
+- **Icons:** react-icons
 
-api key = lxXMILVDYKMdwrPVsITSUeF-4blwwNtgJsLYt5Htt8c
+---
+
+## Installation & Setup
+
+### 1. Clone the repository
+
+```bash
+git https://github.com/Ejoh-Hosea/PhotoQuest.git
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Add your Unsplash API Key
+
+Create a `.env` file in the project root and add:
+
+```bash
+VITE_API_KEY=your_unsplash_access_key
+```
+
+You can get your key from [Unsplash Developers](https://unsplash.com/developers).
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### 5. Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## 💡 Future Improvements
+
+- Add infinite scroll / pagination
+- Add favorites functionality
+- Support image download and detail view
+
+---
